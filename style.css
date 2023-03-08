@@ -1,0 +1,13 @@
+.question {
+    background: url('./images/hp.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: rgb(250, 248, 232);
+    padding: 100px 0px 5px 0px;
+}
+
+.result {
+    font-size: large;
+    color: green;
+    padding: 30px;
+}

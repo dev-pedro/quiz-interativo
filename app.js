@@ -1,7 +1,7 @@
 //pega a referencia do form com as perguntas
 const form = document.querySelector('.quiz-form')
 //array contendo as respostas certas das perguntas da tela do Quiz
-const correctAnswers = ['B','B','B','B']
+const correctAnswers = ['C', 'A', 'C', 'B', 'A']
 
 //adiciona um ouvinte ao form
 form.addEventListener('submit', event => {
@@ -13,16 +13,18 @@ form.addEventListener('submit', event => {
         form.inputQuestion1.value,
         form.inputQuestion2.value,
         form.inputQuestion3.value,
-        form.inputQuestion4.value
+        form.inputQuestion4.value,
+        form.inputQuestion5.value
     ]
 
     //verifica as resposta do usuário e adiciona a pontuação
     userAnswers.forEach((userAnswer, index) => {
-        //caso resposta certa +25
+        //caso resposta certa +20
         if(userAnswer === correctAnswers[index]){
-            score += 25
+            score += 20
         }
     })
     console.log(score)//mostra no console os pontos do usuário
 
 })
+
