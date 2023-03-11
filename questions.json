@@ -1,0 +1,113 @@
+{
+  "questions": [
+  {
+    "number": 1,
+    "title": "Qual é a varinha das varinhas?",
+    "options": [
+      "Varinha de Harry Potter",
+      "Varinha de Lord Voldemort",
+      "Varinha de Alvo Dumbledore"
+    ],
+    "correctAnswer": "2"
+  },
+  {
+    "number": 2,
+    "title": "Qual é a casa de Hogwarts de Harry Potter?",
+    "options": [
+      "Grifinória",
+      "Sonserina",
+      "Lufa-Lufa",
+      "Corvinal"
+    ],
+    "correctAnswer": "1"
+  },
+  {
+    "number": 3,
+    "title": "Qual é o nome do diretor da Escola de Magia e Bruxaria de Hogwarts?",
+    "options": [
+      "Alvo Dumbledore",
+      "Minerva McGonagall",
+      "Severo Snape",
+      "Dolores Umbridge"
+    ],
+    "correctAnswer": "0"
+  },
+  {
+    "number": 4,
+    "title": "Qual é a criatura que guarda a Pedra Filosofal em Harry Potter e a Pedra Filosofal?",
+    "options": [
+      "Dragão",
+      "Unicórnio",
+      "Cerbero",
+      "Fênix"
+    ],
+    "correctAnswer": "2"
+  },
+  {
+    "number": 5,
+    "title": "Quem é o melhor amigo de Harry Potter?",
+    "options": [
+      "Ron Weasley",
+      "Hermione Granger",
+      "Draco Malfoy",
+      "Neville Longbottom"
+    ],
+    "correctAnswer": "0"
+  },
+  {
+    "number": 6,
+    "title": "Qual é o patrono de Harry Potter?",
+    "options": [
+      "Gato",
+      "Coruja",
+      "Cervo",
+      "Cão"
+    ],
+    "correctAnswer": "2"
+  },
+  {
+    "number": 7,
+    "title": "Qual é o feitiço que Harry Potter usa para derrotar Lord Voldemort no final da série?",
+    "options": [
+      "Avada Kedavra",
+      "Expelliarmus",
+      "Imperio",
+      "Crucio"
+    ],
+    "correctAnswer": "1"
+  },
+  {
+    "number": 8,
+    "title": "Qual é o nome do animal de estimação de Hermione Granger?",
+    "options": [
+      "Edwiges",
+      "Crookshanks",
+      "Pigwidgeon",
+      "Nagini"
+    ],
+    "correctAnswer": "1"
+  },
+  {
+    "number": 9,
+    "title": "Qual é o nome do irmão mais velho de Ron Weasley?",
+    "options": [
+      "Charlie",
+      "Percy",
+      "Fred",
+      "George"
+    ],
+    "correctAnswer": "3"
+  },
+  {
+    "number": 10,
+    "title": "Qual é o nome do elfo doméstico que ajuda Harry Potter?",
+    "options": [
+      "Kreacher",
+      "Dobby",
+      "Winky",
+      "Hokey"
+    ],
+    "correctAnswer": "1"
+  }
+]
+}

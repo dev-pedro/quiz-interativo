@@ -4,162 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Quiz</title>
   </head>
   <body class="bg-light">
-    <div class="intro py-3 bg-primary text-center">
+    
+    <div class="quiz quiz-title my-0">
+      <h2 class="my-sm-n2 text-black" style="text-align: center">
+        O Mundo Mágico de Harry Potter:
+      </h2>
+      <h6 class="my-sm-3 text-black" style="text-align: center; font-size: 25px">
+        Um Quiz para Bruxos e Trouxas
+      </h6>
+    </div>
+    <div class="intro py-0 bg-primary text-center">
       <div class="container">
-        <h2 class="text-light display-3 my-4">Quiz</h2>
+        <h2 class="text-light display-4 my-4">Quiz</h2>
+      </div>
+    </div>
+
+    <div class="final-score-container py-2 d-none bg-light text-center">
+      <div class="container lead">
+        <p class="text-secondary" style="font-size: 35px">
+          Você acertou
+          <span class="counter text-primary display-3 p-3">0%</span>
+          do quiz!
+        </p>
+        <p class="bruxo-trouxa d-none" style="font-size: 25px">
+          No mundo mágico de "Harry Potter" você pode ser considerado:<br>
+          <span class="bg-warning text-dark display-4 "></span>
+        </p>
+      </div>
+      <div class="trouxa-bruxo d-none text-secondary display-4 p3">
+        <p></p>
       </div>
     </div>
 
     <div class="quiz py-4 bg-light">
       <div class="container">
-        <div class="quiz question">
-          <h2 class="my-sm-n2 text-black" style="text-align: center">
-            O Mundo Mágico de Harry Potter:
-          </h2>
-          <h6 class="my-sm-3 text-black" style="text-align: center">
-            Um Quiz para Bruxos e Trouxas
-          </h6>
-        </div>
 
+        <!-- as perguntas são adicionadas via javascript -->
         <form class="quiz-form text-black">
-          <div class="my-5">
-            <p class="lead font-weight-normal">
-              1. Qual é a varinha das varinhas?
-            </p>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion1" value="A" />
-                Varinha de Harry Potter
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion1" value="B" />
-                Varinha de Lord Voldemort
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion1" value="C" />
-                Varinha de Alvo Dumbledore
-              </label>
-            </div>
-          </div>
+          <div class="questions"></div>
 
-          <div class="my-5">
-            <p class="lead font-weight-normal">
-              2. Qual é a casa de Hogwarts que representa a coragem?
-            </p>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion2" value="A" />
-                Grifinória
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion2" value="B" />
-                Sonserina
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion2" value="C" />
-                Corvinal
-              </label>
-            </div>
-          </div>
-
-          <div class="my-5">
-            <p class="lead font-weight-normal">
-              3. Qual é o patrono de Harry Potter?
-            </p>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion3" value="A" />
-                Leão
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion3" value="B" />
-                Coruja
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion3" value="C" />
-                Veado
-              </label>
-            </div>
-          </div>
-
-          <div class="my-5">
-            <p class="lead font-weight-normal">
-              4. Qual é o nome do elfo doméstico que pertencia à família Malfoy?
-            </p>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion4" value="A" />
-                Dobby
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion4" value="B" />
-                Kreacher
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion4" value="C" />
-                Winky
-              </label>
-            </div>
-          </div>
-
-          <div class="my-5">
-            <p class="lead font-weight-normal">
-              5. Qual é o nome da coruja de Harry Potter?
-            </p>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion5" value="A" />
-                Edwiges
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion5" value="B" />
-                Hagrid
-              </label>
-            </div>
-            <div class="form-check my-2 text-black-50">
-              <label class="form-check-label">
-                <input type="radio" name="inputQuestion5" value="C" />
-                Crookshanks
-              </label>
-            </div>
-          </div>
-          
           <!-- botão envio -->
           <div class="text-center">
-            <button name="button" class="btn bg-primary text-light">Enviar</button>
+            <button name="button" class="btn bg-primary text-light">
+              Enviar
+            </button>
           </div>
         </form>
       </div>
     </div>
 
-
-    <script src="./app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
