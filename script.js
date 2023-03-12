@@ -1,10 +1,10 @@
 const form = document.querySelector('.quiz-form')
 const finalScoreContainer = document.querySelector('.final-score-container')
-const bruxoOuTrouxa = document.querySelector('.bruxo-trouxa')
+const paragraphBruxoOuTrouxa = document.querySelector('.bruxo-trouxa')
 const divQuestion = document.querySelector('.questions')
 let correctAnswers = []
 let scoreScript = 0
-let percentual = Math.round(100 / correctAnswers.length)
+let percentualAsked = 0
 let wasAnswered = false
 let templateHTML = ''
 
@@ -47,12 +47,11 @@ function insertAsketsOnIndexHTML (questions = {}) {
   //return templateHTML
 }
 //carrega um JSON e chama function para popular o index
-const allQuestions = []
 fetch('./questions.json')
   .then(response => response.json())
   .then(data => {
     insertAsketsOnIndexHTML(data.questions)
-    percentual = Math.round(100 / data.questions.length)
+    percentualAsked = Math.round(100 / data.questions.length)
   })
 
 //armazena as resposta do usuário no array 'userAnswers'
@@ -72,7 +71,7 @@ const calculateUserScore = userAnswers => {
       //caso resposta certa adiciona a pontuação
       const isUserAnswerCorrect = userAnswer === correctAnswers[index]
       if (isUserAnswerCorrect) {
-        scoreScript += percentual
+        scoreScript += percentualAsked
       }
     })
   }
@@ -91,15 +90,14 @@ const showFinalScore = () => {
 
 //mostra mensagem conforme a pontuação
 const showBruxoOuTrouxa = () => {
-  const showBruxoOuTrouxa = bruxoOuTrouxa.querySelector('span') 
-  console.log(scoreScript)
+  const showBruxoOuTrouxa = paragraphBruxoOuTrouxa.querySelector('span') 
   if (scoreScript >= 50) {
     showBruxoOuTrouxa.textContent = '" Bruxo "'
   } else {
     showBruxoOuTrouxa.textContent = '" Trouxa "'
   }
   setTimeout(() => {
-    bruxoOuTrouxa.classList.remove('d-none')
+    paragraphBruxoOuTrouxa.classList.remove('d-none')
   }, 1000)
 }
 
