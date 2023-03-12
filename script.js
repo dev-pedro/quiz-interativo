@@ -93,7 +93,7 @@ const showFinalScore = () => {
 const showBruxoOuTrouxa = () => {
   const showBruxoOuTrouxa = bruxoOuTrouxa.querySelector('span') 
   console.log(scoreScript)
-  if (scoreScript > 60) {
+  if (scoreScript >= 50) {
     showBruxoOuTrouxa.textContent = '" Bruxo "'
   } else {
     showBruxoOuTrouxa.textContent = '" Trouxa "'
