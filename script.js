@@ -1,6 +1,5 @@
 const form = document.querySelector('.quiz-form')
 const finalScoreContainer = document.querySelector('.final-score-container')
-const paragraphBruxoOuTrouxa = document.querySelector('.bruxo-trouxa')
 const divQuestion = document.querySelector('.questions')
 let correctAnswers = ['2', '1', '0', '2', '0', '2', '1', '1', '3', '1']
 let scoreScript = 0
@@ -149,43 +148,6 @@ const calculateUserScore = userAnswers => {
   }
 }
 
-//sobe a página para o topo da aplicação e mostra o resultado
-const showFinalScore = () => {
-  scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
-  finalScoreContainer.classList.remove('d-none')
-}
-
-//mostra mensagem conforme a pontuação
-const showBruxoOuTrouxa = () => {
-  const showBruxoOuTrouxa = paragraphBruxoOuTrouxa.querySelector('span')
-  if (scoreScript >= 50) {
-    showBruxoOuTrouxa.textContent = '" Bruxo "'
-  } else {
-    showBruxoOuTrouxa.textContent = '" Trouxa "'
-  }
-  setTimeout(() => {
-    paragraphBruxoOuTrouxa.classList.remove('d-none')
-  }, 1000)
-}
-
-//anima a pontuação do resultado final
-const animateFinalScore = () => {
-  let counter = 0
-  const timer = setInterval(() => {
-    if (counter === scoreScript) {
-      clearInterval(timer)
-      showBruxoOuTrouxa()
-    }
-    finalScoreContainer.querySelector('span').textContent = `${counter++}%`
-  }, 20)
-
-  wasAnswered = true //evita soma do resultado repetidas vezes
-}
-
 //envia o form
 const onsubmitAnswers = event => {
   event.preventDefault() //evita que o form seja enviado
@@ -193,8 +155,16 @@ const onsubmitAnswers = event => {
   const userAnswers = getUserAswers()
 
   calculateUserScore(userAnswers)
-  showFinalScore()
-  animateFinalScore()
+
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+  finalScoreContainer.classList.remove('d-none')
+
+  finalScoreContainer.querySelector('span').textContent = scoreScript + '%'
+
 }
 
 //adiciona um ouvinte ao form
