@@ -156,14 +156,7 @@ const onsubmitAnswers = event => {
 
   calculateUserScore(userAnswers)
 
-  scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
-  finalScoreContainer.classList.remove('d-none')
-
-  finalScoreContainer.querySelector('span').textContent = scoreScript + '%'
+  alert(`Você acertou ${scoreScript}% do Quiz.`)
 
 }
 
